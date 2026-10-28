@@ -1,4 +1,5 @@
 import tkinter as tk
+from playsound3 import playsound
 import random
 import chat
 import threading
@@ -71,6 +72,7 @@ def render_msg(parent, msg):
         height -= msg_lbl.winfo_reqheight()
         msg_lbl.destroy()
         root.update_idletasks()
+    sound = playsound("sounds/send_music.mp3", block=False)
 
 def render_footer(parent, body, entry_name):
     entry_msg = tk.Entry(parent)
